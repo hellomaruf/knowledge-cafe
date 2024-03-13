@@ -1,4 +1,4 @@
-function Bookmark({ bookmarkTitle, readingTime }) {
+function Bookmark({ bookmarkTitle }) {
   //   const [title] = bookmark;
   //   console.log(title);
   return (

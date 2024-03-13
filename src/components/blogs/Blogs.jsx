@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Blog from "./Blog";
 
-function Blogs({handleAddToBookmarks}) {
+function Blogs({handleAddToBookmarks, handleReadingTime}) {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     const fetchBlog = async () => {
@@ -17,7 +17,7 @@ function Blogs({handleAddToBookmarks}) {
     <div className=" md:w-2/3">
       
       {blogs.map((item, index) => (
-        <Blog handleAddToBookmarks={handleAddToBookmarks}  blogs={item} key={index} />
+        <Blog handleAddToBookmarks={handleAddToBookmarks} handleReadingTime={handleReadingTime}  blogs={item} key={index} />
       ))}
     </div>
   );

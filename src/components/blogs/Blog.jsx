@@ -1,4 +1,4 @@
-function Blog({ blogs, handleAddToBookmarks }) {
+function Blog({ blogs, handleAddToBookmarks,handleReadingTime}) {
   const {
     title,
     cover,
@@ -38,7 +38,7 @@ function Blog({ blogs, handleAddToBookmarks }) {
         ))}
       </div>
       <div className="">
-        <button className="py-2 px-4 bg-yellow-400 rounded-lg">
+        <button onClick={()=>handleReadingTime(reading_time)} className="py-2 px-4 bg-yellow-400 rounded-lg">
           Mark as read
         </button>
       </div>
