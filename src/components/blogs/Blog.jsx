@@ -1,4 +1,4 @@
-function Blog({ blogs }) {
+function Blog({ blogs, handleAddToBookmarks }) {
   const {
     title,
     cover,
@@ -8,7 +8,7 @@ function Blog({ blogs }) {
     reading_time,
     hashtags,
   } = blogs;
-  console.log(blogs);
+
   return (
     <div className="my-10">
       <img className="w-full rounded-xl" src={cover} alt="" />
@@ -24,7 +24,7 @@ function Blog({ blogs }) {
         </div>
         <div className="flex items-center gap-2">
           <p className=" text-xl text-gray-600">{reading_time} min read</p>
-          <button>
+          <button onClick={() => handleAddToBookmarks(blogs)}>
             <i className="ri-bookmark-3-line font-bold text-2xl text-green-500"></i>
           </button>
         </div>
