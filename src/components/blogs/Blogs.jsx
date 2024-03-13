@@ -12,11 +12,13 @@ function Blogs() {
     };
     fetchBlog();
   }, []);
-  console.log(blogs);
+  // console.log(blogs);
   return (
     <div className=" md:w-2/3">
       <h2>Blogs {blogs.length}</h2>
-      <Blog blogs={blogs} />
+      {blogs.map((item, index) => (
+        <Blog blogs={item} key={index} />
+      ))}
     </div>
   );
 }
